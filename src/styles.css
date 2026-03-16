@@ -1,0 +1,288 @@
+@import 'tailwindcss';
+@source './index.jsx';
+
+.webmcp-widget-shell {
+  pointer-events: none;
+  position: fixed;
+  width: min(380px, calc(100vw - 1.25rem));
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.55rem;
+}
+
+.webmcp-size-sm {
+  width: min(320px, calc(100vw - 1.25rem));
+}
+
+.webmcp-size-md {
+  width: min(380px, calc(100vw - 1.25rem));
+}
+
+.webmcp-size-lg {
+  width: min(460px, calc(100vw - 1.25rem));
+}
+
+.webmcp-bottom-right {
+  right: 0.75rem;
+  bottom: 0.75rem;
+}
+
+.webmcp-bottom-left {
+  left: 0.75rem;
+  bottom: 0.75rem;
+}
+
+.webmcp-top-right {
+  right: 0.75rem;
+  top: 0.75rem;
+}
+
+.webmcp-top-left {
+  left: 0.75rem;
+  top: 0.75rem;
+}
+
+.webmcp-bottom-center {
+  left: 50%;
+  bottom: 0.75rem;
+  transform: translateX(-50%);
+  align-items: center;
+}
+
+.webmcp-card {
+  pointer-events: auto;
+  border-radius: 0.9rem;
+  border: 1px solid color-mix(in oklab, #334155 65%, transparent);
+  background: linear-gradient(180deg, #0f172a 0%, #020617 100%);
+  box-shadow: 0 12px 40px color-mix(in oklab, #020617 70%, transparent);
+  color: #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  max-height: 28rem;
+  overflow: hidden;
+}
+
+.webmcp-panel {
+  width: 100%;
+  transition: opacity 180ms ease, transform 180ms ease;
+  transform-origin: bottom right;
+}
+
+.webmcp-panel-open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.webmcp-panel-closed {
+  opacity: 0;
+  transform: translateY(10px) scale(0.97);
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.webmcp-launcher {
+  pointer-events: auto;
+  width: 2.95rem;
+  height: 2.95rem;
+  border-radius: 9999px;
+  border: 1px solid color-mix(in oklab, #38bdf8 40%, #1e293b);
+  background: linear-gradient(180deg, #0ea5e9 0%, #0284c7 100%);
+  color: #082f49;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 30px color-mix(in oklab, #0369a1 45%, transparent);
+}
+
+.webmcp-launcher:hover {
+  filter: brightness(1.05);
+}
+
+.webmcp-launcher-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.webmcp-header {
+  border-bottom: 1px solid #1e293b;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.625rem 0.75rem;
+  font-size: 0.75rem;
+}
+
+.webmcp-header-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  color: #94a3b8;
+}
+
+.webmcp-minimize {
+  border: 1px solid #334155;
+  background: #0b1220;
+  color: #cbd5e1;
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 0.4rem;
+  font-size: 0.95rem;
+  line-height: 1;
+  font-weight: 700;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.webmcp-minimize:hover {
+  background: #172135;
+}
+
+.webmcp-minimize-icon {
+  width: 0.8rem;
+  height: 0.8rem;
+  display: block;
+}
+
+.webmcp-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background: #34d399;
+}
+
+.webmcp-dot.pulse {
+  animation: webmcp-pulse 1.2s infinite;
+}
+
+.webmcp-messages {
+  min-height: 10rem;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 0.7rem;
+}
+
+.webmcp-empty {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.75rem;
+}
+
+.webmcp-message-row {
+  display: flex;
+}
+
+.webmcp-bubble {
+  font-size: 0.75rem;
+  line-height: 1.3;
+  max-width: 84%;
+  border-radius: 0.65rem;
+  padding: 0.4rem 0.55rem;
+  white-space: pre-wrap;
+}
+
+.webmcp-bubble.user {
+  margin-left: auto;
+  background: #0ea5e9;
+  color: #020617;
+}
+
+.webmcp-bubble.bot {
+  margin-right: auto;
+  background: #1e293b;
+  color: #f8fafc;
+}
+
+.webmcp-error {
+  margin: 0;
+  color: #fda4af;
+  font-size: 0.75rem;
+}
+
+.webmcp-input-row {
+  border-top: 1px solid #1e293b;
+  display: flex;
+  gap: 0.4rem;
+  padding: 0.6rem;
+}
+
+.webmcp-input {
+  flex: 1;
+  border-radius: 0.6rem;
+  border: 1px solid #334155;
+  background: #0b1220;
+  color: #f8fafc;
+  font-size: 0.75rem;
+  padding: 0.45rem 0.5rem;
+}
+
+.webmcp-input::placeholder {
+  color: #64748b;
+}
+
+.webmcp-input:focus {
+  outline: 2px solid color-mix(in oklab, #38bdf8 55%, transparent);
+  outline-offset: 1px;
+}
+
+.webmcp-send,
+.webmcp-clear {
+  border-radius: 0.6rem;
+  font-size: 0.72rem;
+  border: none;
+  padding: 0.44rem 0.62rem;
+  cursor: pointer;
+}
+
+.webmcp-send {
+  background: #0ea5e9;
+  color: #020617;
+}
+
+.webmcp-send:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.webmcp-clear {
+  background: #1e293b;
+  color: #e2e8f0;
+}
+
+@keyframes webmcp-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(0.75);
+    opacity: 0.6;
+  }
+}
+
+@media (max-width: 640px) {
+  .webmcp-widget-shell {
+    left: 0.5rem;
+    right: 0.5rem;
+    bottom: 0.5rem;
+    top: auto;
+    width: auto;
+    align-items: stretch;
+  }
+
+  .webmcp-card {
+    max-height: 55vh;
+  }
+
+  .webmcp-launcher {
+    align-self: flex-end;
+  }
+}

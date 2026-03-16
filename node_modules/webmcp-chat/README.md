@@ -1,0 +1,164 @@
+# webmcp-chat
+
+Open-source React chat assistant for WebMCP apps.
+
+If your React app already has WebMCP tools, this package gives you a ready-to-use chat assistant UI so you can ship faster. Add one component and get a modern launcher, panel, minimize behavior, and Gemini-based tool calling.
+
+## Why webmcp-chat
+
+- Built for WebMCP React apps
+- Drop-in widget with production-ready default UI
+- Floating chat icon launcher with open/close and minimize
+- Tool-calling assistant powered by Google GenAI (Gemini)
+- TypeScript declarations included
+- Fully customizable layout, labels, icon, size, and position
+- MIT licensed open-source project
+
+## Install
+
+```bash
+npm i webmcp-chat @google/genai
+```
+
+## Quick Start
+
+```jsx
+import { WebMcpChatWidget } from 'webmcp-chat'
+
+export default function App() {
+  return (
+    <>
+      {/* Your app UI */}
+
+      <WebMcpChatWidget
+        apiKey={import.meta.env.VITE_GEMINI_API_KEY}
+        title="Chat Assistant"
+      />
+    </>
+  )
+}
+```
+
+## What You Need In Your App
+
+- A React app that already exposes WebMCP tools
+- A WebMCP client/provider already initialized in your app shell
+- Gemini API key for current model support
+
+## Default UX
+
+By default, `WebMcpChatWidget` provides:
+
+- Floating assistant launcher icon
+- Click launcher to open/close panel
+- Header minimize button
+- Styled chat panel with status, messages, and composer
+- Smart mobile behavior and responsive sizing
+
+No extra CSS setup is required in standard Vite/React workflows.
+
+## Props
+
+### Runtime
+
+- `apiKey?: string`
+- `model?: string` (default: `gemini-2.5-flash`)
+- `systemPrompt?: string`
+
+### Widget Behavior
+
+- `defaultOpen?: boolean`
+- `showLauncher?: boolean`
+- `showMinimizeButton?: boolean`
+
+### Placement and Size
+
+- `position?: 'bottom-right' | 'bottom-left' | 'top-right' | 'top-left'`
+- `size?: 'sm' | 'md' | 'lg'`
+
+### Launcher Customization
+
+- `launcherIcon?: ReactNode`
+- `launcherLabel?: string`
+- `closeLauncherLabel?: string`
+- `launcherClassName?: string`
+
+### Chat Content and Labels
+
+- `title?: string`
+- `placeholder?: string`
+- `emptyState?: string`
+- `sendLabel?: string`
+- `clearLabel?: string`
+- `minimizeLabel?: string`
+- `showClearButton?: boolean`
+
+### Styling Hooks
+
+- `className?: string`
+- `panelClassName?: string`
+- `chatClassName?: string`
+
+## Customization Example
+
+```jsx
+import { WebMcpChatWidget } from 'webmcp-chat'
+
+function MyChatIcon() {
+  return <span style={{ fontSize: 18 }}>AI</span>
+}
+
+export default function App() {
+  return (
+    <WebMcpChatWidget
+      apiKey={import.meta.env.VITE_GEMINI_API_KEY}
+      title="Product Assistant"
+      position="bottom-left"
+      size="lg"
+      launcherIcon={<MyChatIcon />}
+      launcherLabel="Open product assistant"
+      closeLauncherLabel="Close product assistant"
+      minimizeLabel="Minimize product assistant"
+    />
+  )
+}
+```
+
+## Model Support
+
+Current:
+
+- Gemini (Google GenAI)
+
+Planned roadmap:
+
+- GPT
+- Claude
+- Groq
+- Additional providers through a provider-agnostic adapter layer
+
+## Open Source
+
+`webmcp-chat` is an open-source project under MIT license.
+
+Contributions are welcome for:
+
+- New model providers
+- Better theming presets
+- Accessibility enhancements
+- Extended test coverage
+- Docs/examples
+
+## Local Development
+
+```bash
+npm run dev
+npm run test
+npm run build
+```
+
+## Publish
+
+```bash
+npm publish --access public
+```
