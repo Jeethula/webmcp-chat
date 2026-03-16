@@ -149,6 +149,10 @@ Contributions are welcome for:
 - Extended test coverage
 - Docs/examples
 
+See contribution guidelines in [CONTRIBUTING.md](./CONTRIBUTING.md).
+
+Owner details are in [OWNER.md](./OWNER.md).
+
 ## Local Development
 
 ```bash
