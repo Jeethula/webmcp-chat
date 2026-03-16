@@ -153,6 +153,12 @@ See contribution guidelines in [CONTRIBUTING.md](./CONTRIBUTING.md).
 
 Owner details are in [OWNER.md](./OWNER.md).
 
+License details are in [LICENSE](./LICENSE).
+
+Community rules are in [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md).
+
+Security reporting policy is in [SECURITY.md](./SECURITY.md).
+
 ## Local Development
 
 ```bash
