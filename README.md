@@ -17,13 +17,44 @@ If your React app already has WebMCP tools, this package gives you a ready-to-us
 ## Install
 
 ```bash
-npm i webmcp-chat @google/genai
+npm i webmcp-chat @google/genai @mcp-b/react-webmcp @modelcontextprotocol/sdk @mcp-b/transports zod zod-to-json-schema
+```
+
+If your browser does not provide `navigator.modelContext`, install the polyfill:
+
+```bash
+npm i @mcp-b/global
+```
+
+## Mandatory Setup: McpClientProvider
+
+`WebMcpChatWidget` requires a WebMCP client context. Wrap your app root with `McpClientProvider`.
+
+```jsx
+import '@mcp-b/global'
+import { createRoot } from 'react-dom/client'
+import { McpClientProvider } from '@mcp-b/react-webmcp'
+import { Client } from '@modelcontextprotocol/sdk/client/index.js'
+import { TabClientTransport } from '@mcp-b/transports'
+import App from './App.jsx'
+
+const client = new Client({ name: 'MyApp', version: '1.0.0' })
+const transport = new TabClientTransport({ targetOrigin: window.location.origin })
+
+createRoot(document.getElementById('root')).render(
+  <McpClientProvider client={client} transport={transport}>
+    <App />
+  </McpClientProvider>,
+)
 ```
 
 ## Quick Start
 
 ```jsx
 import { WebMcpChatWidget } from 'webmcp-chat'
+
+// Optional: import packaged styles manually if your app requires explicit CSS imports.
+import 'webmcp-chat/styles.css'
 
 export default function App() {
   return (
@@ -42,8 +73,10 @@ export default function App() {
 ## What You Need In Your App
 
 - A React app that already exposes WebMCP tools
-- A WebMCP client/provider already initialized in your app shell
+- A `McpClientProvider` already initialized in your app shell
 - Gemini API key for current model support
+- Required packages for tool calling: `@mcp-b/react-webmcp`, `@modelcontextprotocol/sdk`, `@mcp-b/transports`
+- Some WebMCP tool stacks also require: `zod`, `zod-to-json-schema`
 
 ## Default UX
 
@@ -55,7 +88,9 @@ By default, `WebMcpChatWidget` provides:
 - Styled chat panel with status, messages, and composer
 - Smart mobile behavior and responsive sizing
 
-No extra CSS setup is required in standard Vite/React workflows.
+By default, styles are auto-injected by the widget.
+
+You can also import styles explicitly with `import 'webmcp-chat/styles.css'`.
 
 ## Props
 

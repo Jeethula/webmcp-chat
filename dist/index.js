@@ -1,28 +1,28 @@
-import ae, { createContext as se, useState as z, useMemo as V, useCallback as B, useEffect as le, useContext as ce } from "react";
-import { GoogleGenAI as de, mcpToTool as me } from "@google/genai";
-import { useMcpClient as ue } from "@mcp-b/react-webmcp";
+import ae, { createContext as se, useState as P, useMemo as V, useCallback as B, useEffect as le, useContext as ce } from "react";
+import { GoogleGenAI as ue, mcpToTool as de } from "@google/genai";
+import { useMcpClient as me } from "@mcp-b/react-webmcp";
 var O = { exports: {} }, A = {};
 var X;
 function pe() {
   if (X) return A;
   X = 1;
   var n = /* @__PURE__ */ Symbol.for("react.transitional.element"), c = /* @__PURE__ */ Symbol.for("react.fragment");
-  function m(w, l, s) {
-    var u = null;
-    if (s !== void 0 && (u = "" + s), l.key !== void 0 && (u = "" + l.key), "key" in l) {
+  function d(g, l, s) {
+    var m = null;
+    if (s !== void 0 && (m = "" + s), l.key !== void 0 && (m = "" + l.key), "key" in l) {
       s = {};
       for (var p in l)
         p !== "key" && (s[p] = l[p]);
     } else s = l;
     return l = s.ref, {
       $$typeof: n,
-      type: w,
-      key: u,
+      type: g,
+      key: m,
       ref: l !== void 0 ? l : null,
       props: s
     };
   }
-  return A.Fragment = c, A.jsx = m, A.jsxs = m, A;
+  return A.Fragment = c, A.jsx = d, A.jsxs = d, A;
 }
 var M = {};
 var H;
@@ -36,7 +36,7 @@ function be() {
       switch (e) {
         case v:
           return "Fragment";
-        case d:
+        case u:
           return "Profiler";
         case k:
           return "StrictMode";
@@ -74,7 +74,7 @@ function be() {
     function c(e) {
       return "" + e;
     }
-    function m(e) {
+    function d(e) {
       try {
         c(e);
         var t = !1;
@@ -91,7 +91,7 @@ function be() {
         ), c(e);
       }
     }
-    function w(e) {
+    function g(e) {
       if (e === v) return "<>";
       if (typeof e == "object" && e !== null && e.$$typeof === I)
         return "<...>";
@@ -109,7 +109,7 @@ function be() {
     function s() {
       return Error("react-stack-top-frame");
     }
-    function u(e) {
+    function m(e) {
       if (F.call(e, "key")) {
         var t = Object.getOwnPropertyDescriptor(e, "key").get;
         if (t && t.isReactWarning) return !1;
@@ -134,7 +134,7 @@ function be() {
         "Accessing element.ref was removed in React 19. ref is now a regular prop. It will be removed from the JSX Element type in a future release."
       )), e = this.props.ref, e !== void 0 ? e : null;
     }
-    function _(e, t, o, i, P, Y) {
+    function _(e, t, o, i, z, Y) {
       var a = o.ref;
       return e = {
         $$typeof: y,
@@ -159,7 +159,7 @@ function be() {
         configurable: !1,
         enumerable: !1,
         writable: !0,
-        value: P
+        value: z
       }), Object.defineProperty(e, "_debugTask", {
         configurable: !1,
         enumerable: !1,
@@ -167,7 +167,7 @@ function be() {
         value: Y
       }), Object.freeze && (Object.freeze(e.props), Object.freeze(e)), e;
     }
-    function g(e, t, o, i, P, Y) {
+    function w(e, t, o, i, z, Y) {
       var a = t.children;
       if (a !== void 0)
         if (i)
@@ -198,7 +198,7 @@ React keys must be passed directly to JSX without using spread:
           a
         ), J[a + i] = !0);
       }
-      if (a = null, o !== void 0 && (m(o), a = "" + o), u(t) && (m(t.key), a = "" + t.key), "key" in t) {
+      if (a = null, o !== void 0 && (d(o), a = "" + o), m(t) && (d(t.key), a = "" + t.key), "key" in t) {
         o = {};
         for (var D in t)
           D !== "key" && (o[D] = t[D]);
@@ -211,7 +211,7 @@ React keys must be passed directly to JSX without using spread:
         a,
         o,
         l(),
-        P,
+        z,
         Y
       );
     }
@@ -221,7 +221,7 @@ React keys must be passed directly to JSX without using spread:
     function f(e) {
       return typeof e == "object" && e !== null && e.$$typeof === y;
     }
-    var h = ae, y = /* @__PURE__ */ Symbol.for("react.transitional.element"), x = /* @__PURE__ */ Symbol.for("react.portal"), v = /* @__PURE__ */ Symbol.for("react.fragment"), k = /* @__PURE__ */ Symbol.for("react.strict_mode"), d = /* @__PURE__ */ Symbol.for("react.profiler"), j = /* @__PURE__ */ Symbol.for("react.consumer"), R = /* @__PURE__ */ Symbol.for("react.context"), T = /* @__PURE__ */ Symbol.for("react.forward_ref"), N = /* @__PURE__ */ Symbol.for("react.suspense"), C = /* @__PURE__ */ Symbol.for("react.suspense_list"), te = /* @__PURE__ */ Symbol.for("react.memo"), I = /* @__PURE__ */ Symbol.for("react.lazy"), re = /* @__PURE__ */ Symbol.for("react.activity"), ne = /* @__PURE__ */ Symbol.for("react.client.reference"), W = h.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, F = Object.prototype.hasOwnProperty, oe = Array.isArray, $ = console.createTask ? console.createTask : function() {
+    var h = ae, y = /* @__PURE__ */ Symbol.for("react.transitional.element"), x = /* @__PURE__ */ Symbol.for("react.portal"), v = /* @__PURE__ */ Symbol.for("react.fragment"), k = /* @__PURE__ */ Symbol.for("react.strict_mode"), u = /* @__PURE__ */ Symbol.for("react.profiler"), j = /* @__PURE__ */ Symbol.for("react.consumer"), R = /* @__PURE__ */ Symbol.for("react.context"), T = /* @__PURE__ */ Symbol.for("react.forward_ref"), N = /* @__PURE__ */ Symbol.for("react.suspense"), C = /* @__PURE__ */ Symbol.for("react.suspense_list"), te = /* @__PURE__ */ Symbol.for("react.memo"), I = /* @__PURE__ */ Symbol.for("react.lazy"), re = /* @__PURE__ */ Symbol.for("react.activity"), ne = /* @__PURE__ */ Symbol.for("react.client.reference"), W = h.__CLIENT_INTERNALS_DO_NOT_USE_OR_WARN_USERS_THEY_CANNOT_UPGRADE, F = Object.prototype.hasOwnProperty, oe = Array.isArray, $ = console.createTask ? console.createTask : function() {
       return null;
     };
     h = {
@@ -232,26 +232,26 @@ React keys must be passed directly to JSX without using spread:
     var L, G = {}, U = h.react_stack_bottom_frame.bind(
       h,
       s
-    )(), q = $(w(s)), J = {};
+    )(), q = $(g(s)), J = {};
     M.Fragment = v, M.jsx = function(e, t, o) {
       var i = 1e4 > W.recentlyCreatedOwnerStacks++;
-      return g(
+      return w(
         e,
         t,
         o,
         !1,
         i ? Error("react-stack-top-frame") : U,
-        i ? $(w(e)) : q
+        i ? $(g(e)) : q
       );
     }, M.jsxs = function(e, t, o) {
       var i = 1e4 > W.recentlyCreatedOwnerStacks++;
-      return g(
+      return w(
         e,
         t,
         o,
         !0,
         i ? Error("react-stack-top-frame") : U,
-        i ? $(w(e)) : q
+        i ? $(g(e)) : q
       );
     };
   })()), M;
@@ -261,14 +261,14 @@ function fe() {
   return Z || (Z = 1, process.env.NODE_ENV === "production" ? O.exports = pe() : O.exports = be()), O.exports;
 }
 var r = fe();
-const he = '@layer properties{@supports (((-webkit-hyphens:none)) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))){*,:before,:after,::backdrop{--tw-rotate-x:initial;--tw-rotate-y:initial;--tw-rotate-z:initial;--tw-skew-x:initial;--tw-skew-y:initial}}}@layer theme{:root,:host{--font-sans:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";--font-mono:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;--default-font-family:var(--font-sans);--default-mono-font-family:var(--font-mono)}}@layer base{*,:after,:before,::backdrop{box-sizing:border-box;border:0 solid;margin:0;padding:0}::file-selector-button{box-sizing:border-box;border:0 solid;margin:0;padding:0}html,:host{-webkit-text-size-adjust:100%;tab-size:4;line-height:1.5;font-family:var(--default-font-family,ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");font-feature-settings:var(--default-font-feature-settings,normal);font-variation-settings:var(--default-font-variation-settings,normal);-webkit-tap-highlight-color:transparent}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;-webkit-text-decoration:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:var(--default-mono-font-family,ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);font-feature-settings:var(--default-mono-font-feature-settings,normal);font-variation-settings:var(--default-mono-font-variation-settings,normal);font-size:1em}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}:-moz-focusring{outline:auto}progress{vertical-align:baseline}summary{display:list-item}ol,ul,menu{list-style:none}img,svg,video,canvas,audio,iframe,embed,object{vertical-align:middle;display:block}img,video{max-width:100%;height:auto}button,input,select,optgroup,textarea{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}::file-selector-button{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}:where(select:is([multiple],[size])) optgroup{font-weight:bolder}:where(select:is([multiple],[size])) optgroup option{padding-inline-start:20px}::file-selector-button{margin-inline-end:4px}::placeholder{opacity:1}@supports (not ((-webkit-appearance:-apple-pay-button))) or (contain-intrinsic-size:1px){::placeholder{color:currentColor}@supports (color:color-mix(in lab,red,red)){::placeholder{color:color-mix(in oklab,currentcolor 50%,transparent)}}}textarea{resize:vertical}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-date-and-time-value{min-height:1lh;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-datetime-edit{padding-block:0}::-webkit-datetime-edit-year-field{padding-block:0}::-webkit-datetime-edit-month-field{padding-block:0}::-webkit-datetime-edit-day-field{padding-block:0}::-webkit-datetime-edit-hour-field{padding-block:0}::-webkit-datetime-edit-minute-field{padding-block:0}::-webkit-datetime-edit-second-field{padding-block:0}::-webkit-datetime-edit-millisecond-field{padding-block:0}::-webkit-datetime-edit-meridiem-field{padding-block:0}::-webkit-calendar-picker-indicator{line-height:1}:-moz-ui-invalid{box-shadow:none}button,input:where([type=button],[type=reset],[type=submit]){appearance:button}::file-selector-button{appearance:button}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[hidden]:where(:not([hidden=until-found])){display:none!important}}@layer components;@layer utilities{.contents{display:contents}.table{display:table}.transform{transform:var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,)}}.webmcp-widget-shell{pointer-events:none;z-index:50;flex-direction:column;align-items:flex-end;gap:.55rem;width:min(380px,100vw - 1.25rem);display:flex;position:fixed}.webmcp-size-sm{width:min(320px,100vw - 1.25rem)}.webmcp-size-md{width:min(380px,100vw - 1.25rem)}.webmcp-size-lg{width:min(460px,100vw - 1.25rem)}.webmcp-bottom-right{bottom:.75rem;right:.75rem}.webmcp-bottom-left{bottom:.75rem;left:.75rem}.webmcp-top-right{top:.75rem;right:.75rem}.webmcp-top-left{top:.75rem;left:.75rem}.webmcp-bottom-center{align-items:center;bottom:.75rem;left:50%;transform:translate(-50%)}.webmcp-card{pointer-events:auto;color:#e2e8f0;background:linear-gradient(#0f172a,#020617);border:1px solid oklab(37.1696% -.00861713 -.0381965/.65);border-radius:.9rem;flex-direction:column;max-height:28rem;display:flex;overflow:hidden;box-shadow:0 12px 40px #020617b3}.webmcp-panel{transform-origin:100% 100%;width:100%;transition:opacity .18s,transform .18s}.webmcp-panel-open{opacity:1;transform:translateY(0)scale(1)}.webmcp-panel-closed{opacity:0;pointer-events:none;visibility:hidden;transform:translateY(10px)scale(.97)}.webmcp-launcher{pointer-events:auto;color:#082f49;background:linear-gradient(#0ea5e9,#0284c7);border:1px solid oklab(46.9102% -.0375473 -.0659772);border-radius:9999px;justify-content:center;align-items:center;width:2.95rem;height:2.95rem;display:inline-flex;box-shadow:0 12px 30px #0369a173}.webmcp-launcher:hover{filter:brightness(1.05)}.webmcp-launcher-icon{width:1.25rem;height:1.25rem}.webmcp-header{border-bottom:1px solid #1e293b;justify-content:space-between;align-items:center;gap:.75rem;padding:.625rem .75rem;font-size:.75rem;display:flex}.webmcp-header-actions{color:#94a3b8;align-items:center;gap:.375rem;display:inline-flex}.webmcp-minimize{color:#cbd5e1;cursor:pointer;background:#0b1220;border:1px solid #334155;border-radius:.4rem;justify-content:center;align-items:center;width:1.35rem;height:1.35rem;padding:0;font-size:.95rem;font-weight:700;line-height:1;display:inline-flex}.webmcp-minimize:hover{background:#172135}.webmcp-minimize-icon{width:.8rem;height:.8rem;display:block}.webmcp-dot{background:#34d399;border-radius:9999px;width:.5rem;height:.5rem}.webmcp-dot.pulse{animation:1.2s infinite webmcp-pulse}.webmcp-messages{flex-direction:column;gap:.45rem;min-height:10rem;padding:.7rem;display:flex;overflow-y:auto}.webmcp-empty{color:#64748b;margin:0;font-size:.75rem}.webmcp-message-row{display:flex}.webmcp-bubble{white-space:pre-wrap;border-radius:.65rem;max-width:84%;padding:.4rem .55rem;font-size:.75rem;line-height:1.3}.webmcp-bubble.user{color:#020617;background:#0ea5e9;margin-left:auto}.webmcp-bubble.bot{color:#f8fafc;background:#1e293b;margin-right:auto}.webmcp-error{color:#fda4af;margin:0;font-size:.75rem}.webmcp-input-row{border-top:1px solid #1e293b;gap:.4rem;padding:.6rem;display:flex}.webmcp-input{color:#f8fafc;background:#0b1220;border:1px solid #334155;border-radius:.6rem;flex:1;padding:.45rem .5rem;font-size:.75rem}.webmcp-input::placeholder{color:#64748b}.webmcp-input:focus{outline-offset:1px;outline:2px solid oklab(75.3513% -.0842999 -.110505/.55)}.webmcp-send,.webmcp-clear{cursor:pointer;border:none;border-radius:.6rem;padding:.44rem .62rem;font-size:.72rem}.webmcp-send{color:#020617;background:#0ea5e9}.webmcp-send:disabled{opacity:.65;cursor:not-allowed}.webmcp-clear{color:#e2e8f0;background:#1e293b}@keyframes webmcp-pulse{0%,to{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(.75)}}@media(max-width:640px){.webmcp-widget-shell{align-items:stretch;width:auto;inset:auto .5rem .5rem}.webmcp-card{max-height:55vh}.webmcp-launcher{align-self:flex-end}}@property --tw-rotate-x{syntax:"*";inherits:false}@property --tw-rotate-y{syntax:"*";inherits:false}@property --tw-rotate-z{syntax:"*";inherits:false}@property --tw-skew-x{syntax:"*";inherits:false}@property --tw-skew-y{syntax:"*";inherits:false}', ee = se(null), Q = "webmcp-chat-default-styles";
-function we() {
+const he = '@layer theme{:root,:host{--font-sans:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";--font-mono:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;--default-font-family:var(--font-sans);--default-mono-font-family:var(--font-mono)}}@layer base{*,:after,:before,::backdrop{box-sizing:border-box;border:0 solid;margin:0;padding:0}::file-selector-button{box-sizing:border-box;border:0 solid;margin:0;padding:0}html,:host{-webkit-text-size-adjust:100%;tab-size:4;line-height:1.5;font-family:var(--default-font-family,ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji");font-feature-settings:var(--default-font-feature-settings,normal);font-variation-settings:var(--default-font-variation-settings,normal);-webkit-tap-highlight-color:transparent}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;-webkit-text-decoration:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,samp,pre{font-family:var(--default-mono-font-family,ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace);font-feature-settings:var(--default-mono-font-feature-settings,normal);font-variation-settings:var(--default-mono-font-variation-settings,normal);font-size:1em}small{font-size:80%}sub,sup{vertical-align:baseline;font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}:-moz-focusring{outline:auto}progress{vertical-align:baseline}summary{display:list-item}ol,ul,menu{list-style:none}img,svg,video,canvas,audio,iframe,embed,object{vertical-align:middle;display:block}img,video{max-width:100%;height:auto}button,input,select,optgroup,textarea{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}::file-selector-button{font:inherit;font-feature-settings:inherit;font-variation-settings:inherit;letter-spacing:inherit;color:inherit;opacity:1;background-color:#0000;border-radius:0}:where(select:is([multiple],[size])) optgroup{font-weight:bolder}:where(select:is([multiple],[size])) optgroup option{padding-inline-start:20px}::file-selector-button{margin-inline-end:4px}::placeholder{opacity:1}@supports (not ((-webkit-appearance:-apple-pay-button))) or (contain-intrinsic-size:1px){::placeholder{color:currentColor}@supports (color:color-mix(in lab,red,red)){::placeholder{color:color-mix(in oklab,currentcolor 50%,transparent)}}}textarea{resize:vertical}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-date-and-time-value{min-height:1lh;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-datetime-edit{padding-block:0}::-webkit-datetime-edit-year-field{padding-block:0}::-webkit-datetime-edit-month-field{padding-block:0}::-webkit-datetime-edit-day-field{padding-block:0}::-webkit-datetime-edit-hour-field{padding-block:0}::-webkit-datetime-edit-minute-field{padding-block:0}::-webkit-datetime-edit-second-field{padding-block:0}::-webkit-datetime-edit-millisecond-field{padding-block:0}::-webkit-datetime-edit-meridiem-field{padding-block:0}::-webkit-calendar-picker-indicator{line-height:1}:-moz-ui-invalid{box-shadow:none}button,input:where([type=button],[type=reset],[type=submit]){appearance:button}::file-selector-button{appearance:button}::-webkit-inner-spin-button{height:auto}::-webkit-outer-spin-button{height:auto}[hidden]:where(:not([hidden=until-found])){display:none!important}}@layer components;@layer utilities{.contents{display:contents}}.webmcp-widget-shell{pointer-events:none;z-index:50;flex-direction:column;align-items:flex-end;gap:.55rem;width:min(380px,100vw - 1.25rem);display:flex;position:fixed}.webmcp-size-sm{width:min(320px,100vw - 1.25rem)}.webmcp-size-md{width:min(380px,100vw - 1.25rem)}.webmcp-size-lg{width:min(460px,100vw - 1.25rem)}.webmcp-bottom-right{inset:auto .75rem .75rem auto}.webmcp-bottom-left{inset:auto auto .75rem .75rem}.webmcp-top-right{inset:.75rem .75rem auto auto}.webmcp-top-left{inset:.75rem auto auto .75rem}.webmcp-bottom-center{align-items:center;bottom:.75rem;left:50%;transform:translate(-50%)}.webmcp-card{pointer-events:auto;color:#e2e8f0;background:linear-gradient(#0f172a,#020617);border:1px solid oklab(37.1696% -.00861713 -.0381965/.65);border-radius:.9rem;flex-direction:column;max-height:28rem;display:flex;overflow:hidden;box-shadow:0 12px 40px #020617b3}.webmcp-panel{transform-origin:100% 100%;width:100%;transition:opacity .18s,transform .18s}.webmcp-panel-open{opacity:1;transform:translateY(0)scale(1)}.webmcp-panel-closed{opacity:0;pointer-events:none;visibility:hidden;transform:translateY(10px)scale(.97)}.webmcp-launcher{pointer-events:auto;color:#082f49;background:linear-gradient(#0ea5e9,#0284c7);border:1px solid oklab(46.9102% -.0375473 -.0659772);border-radius:9999px;justify-content:center;align-items:center;width:2.95rem;height:2.95rem;display:inline-flex;box-shadow:0 12px 30px #0369a173}.webmcp-launcher:hover{filter:brightness(1.05)}.webmcp-launcher-icon{width:1.25rem;height:1.25rem}.webmcp-header{border-bottom:1px solid #1e293b;justify-content:space-between;align-items:center;gap:.75rem;padding:.625rem .75rem;font-size:.75rem;display:flex}.webmcp-header-actions{color:#94a3b8;align-items:center;gap:.375rem;display:inline-flex}.webmcp-minimize{color:#cbd5e1;cursor:pointer;background:#0b1220;border:1px solid #334155;border-radius:.4rem;justify-content:center;align-items:center;width:1.35rem;height:1.35rem;padding:0;font-size:.95rem;font-weight:700;line-height:1;display:inline-flex}.webmcp-minimize:hover{background:#172135}.webmcp-minimize-icon{width:.8rem;height:.8rem;display:block}.webmcp-dot{background:#34d399;border-radius:9999px;width:.5rem;height:.5rem}.webmcp-dot.pulse{animation:1.2s infinite webmcp-pulse}.webmcp-messages{flex-direction:column;gap:.45rem;min-height:10rem;padding:.7rem;display:flex;overflow-y:auto}.webmcp-empty{color:#64748b;margin:0;font-size:.75rem}.webmcp-message-row{display:flex}.webmcp-bubble{white-space:pre-wrap;border-radius:.65rem;max-width:84%;padding:.4rem .55rem;font-size:.75rem;line-height:1.3}.webmcp-bubble.user{color:#020617;background:#0ea5e9;margin-left:auto}.webmcp-bubble.bot{color:#f8fafc;background:#1e293b;margin-right:auto}.webmcp-error{color:#fda4af;margin:0;font-size:.75rem}.webmcp-input-row{border-top:1px solid #1e293b;gap:.4rem;padding:.6rem;display:flex}.webmcp-input{color:#f8fafc;background:#0b1220;border:1px solid #334155;border-radius:.6rem;flex:1;padding:.45rem .5rem;font-size:.75rem}.webmcp-input::placeholder{color:#64748b}.webmcp-input:focus{outline-offset:1px;outline:2px solid oklab(75.3513% -.0842999 -.110505/.55)}.webmcp-send,.webmcp-clear{cursor:pointer;border:none;border-radius:.6rem;padding:.44rem .62rem;font-size:.72rem}.webmcp-send{color:#020617;background:#0ea5e9}.webmcp-send:disabled{opacity:.65;cursor:not-allowed}.webmcp-clear{color:#e2e8f0;background:#1e293b}@keyframes webmcp-pulse{0%,to{opacity:1;transform:scale(1)}50%{opacity:.6;transform:scale(.75)}}@media(max-width:640px){.webmcp-widget-shell{align-items:stretch;width:auto;inset:auto .5rem .5rem}.webmcp-card{max-height:55vh}.webmcp-launcher{align-self:flex-end}}', ee = se(null), Q = "webmcp-chat-default-styles";
+function ge() {
   if (typeof document > "u" || document.getElementById(Q)) return;
   const n = document.createElement("style");
   n.id = Q, n.textContent = he, document.head.appendChild(n);
 }
-we();
-const ge = "You are an assistant running inside a web app with WebMCP tools. When the user asks to inspect or modify app state, use available tools whenever possible. Never claim an action succeeded unless the tool call actually succeeded.";
+ge();
+const we = "You are an assistant running inside a web app with WebMCP tools. When the user asks to inspect or modify app state, use available tools whenever possible. Never claim an action succeeded unless the tool call actually succeeded.";
 function K(n, c) {
   return {
     id: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
@@ -325,11 +325,11 @@ function ve() {
 function ke({
   apiKey: n,
   model: c = "gemini-2.5-flash",
-  systemPrompt: m = ge,
-  initialMessages: w = [],
+  systemPrompt: d = we,
+  initialMessages: g = [],
   children: l
 }) {
-  const { client: s } = ue(), [u, p] = z(w), [E, _] = z(!1), [g, b] = z(null), f = V(() => n ? new de({ apiKey: n }) : null, [n]), h = B(
+  const { client: s } = me(), [m, p] = P(g), [E, _] = P(!1), [w, b] = P(null), f = V(() => n ? new ue({ apiKey: n }) : null, [n]), h = B(
     async (v) => {
       const k = v?.trim();
       if (!k) return;
@@ -342,17 +342,17 @@ function ke({
         return;
       }
       b(null);
-      const d = K("user", k), j = [...u, d];
+      const u = K("user", k), j = [...m, u];
       p(j), _(!0);
       try {
         const R = j.map((C) => `${C.role === "user" ? "User" : "Assistant"}: ${C.text}`).join(`
 `), N = ((await f.models.generateContent({
           model: c,
-          contents: `${m}
+          contents: `${d}
 
 ${R}`,
           config: {
-            tools: [me(s)]
+            tools: [de(s)]
           }
         })).text || "").trim() || "(No response)";
         p((C) => [...C, K("assistant", N)]);
@@ -363,20 +363,20 @@ ${R}`,
         _(!1);
       }
     },
-    [f, n, s, u, c, m]
+    [f, n, s, m, c, d]
   ), y = B(() => {
     p([]), b(null);
   }, []), x = V(
     () => ({
-      messages: u,
+      messages: m,
       isThinking: E,
-      error: g,
+      error: w,
       sendMessage: h,
       clearMessages: y,
       model: c,
-      systemPrompt: m
+      systemPrompt: d
     }),
-    [u, E, g, h, y, c, m]
+    [m, E, w, h, y, c, d]
   );
   return /* @__PURE__ */ r.jsx(ee.Provider, { value: x, children: l });
 }
@@ -391,18 +391,18 @@ function ye() {
 function Ee({
   className: n = "",
   title: c = "Chat Assistant",
-  placeholder: m = "Ask the assistant to read or update app state...",
-  emptyState: w = "No messages yet. Ask me to use your WebMCP tools.",
+  placeholder: d = "Ask the assistant to read or update app state...",
+  emptyState: g = "No messages yet. Ask me to use your WebMCP tools.",
   sendLabel: l = "Send",
   clearLabel: s = "Clear",
-  showClearButton: u = !0,
+  showClearButton: m = !0,
   onMinimize: p,
   minimizeLabel: E = "Minimize assistant",
   showMinimizeButton: _ = !0
 }) {
-  const { messages: g, isThinking: b, error: f, sendMessage: h, clearMessages: y } = ye(), [x, v] = z("");
-  async function k(d) {
-    if (d.preventDefault(), !x.trim()) return;
+  const { messages: w, isThinking: b, error: f, sendMessage: h, clearMessages: y } = ye(), [x, v] = P("");
+  async function k(u) {
+    if (u.preventDefault(), !x.trim()) return;
     const j = x;
     v(""), await h(j);
   }
@@ -425,14 +425,14 @@ function Ee({
       ] })
     ] }),
     /* @__PURE__ */ r.jsxs("div", { className: "webmcp-messages", children: [
-      g.length === 0 && /* @__PURE__ */ r.jsx("p", { className: "webmcp-empty", children: w }),
-      g.map((d) => /* @__PURE__ */ r.jsx("div", { className: "webmcp-message-row", children: /* @__PURE__ */ r.jsx(
+      w.length === 0 && /* @__PURE__ */ r.jsx("p", { className: "webmcp-empty", children: g }),
+      w.map((u) => /* @__PURE__ */ r.jsx("div", { className: "webmcp-message-row", children: /* @__PURE__ */ r.jsx(
         "div",
         {
-          className: d.role === "user" ? "webmcp-bubble user" : "webmcp-bubble bot",
-          children: d.text
+          className: u.role === "user" ? "webmcp-bubble user" : "webmcp-bubble bot",
+          children: u.text
         }
-      ) }, d.id)),
+      ) }, u.id)),
       f && /* @__PURE__ */ r.jsx("p", { className: "webmcp-error", children: f })
     ] }),
     /* @__PURE__ */ r.jsxs("form", { onSubmit: k, className: "webmcp-input-row", children: [
@@ -440,28 +440,28 @@ function Ee({
         "input",
         {
           value: x,
-          onChange: (d) => v(d.target.value),
-          placeholder: m,
+          onChange: (u) => v(u.target.value),
+          placeholder: d,
           className: "webmcp-input"
         }
       ),
       /* @__PURE__ */ r.jsx("button", { type: "submit", disabled: b, className: "webmcp-send", children: l }),
-      u ? /* @__PURE__ */ r.jsx("button", { type: "button", onClick: y, className: "webmcp-clear", children: s }) : null
+      m ? /* @__PURE__ */ r.jsx("button", { type: "button", onClick: y, className: "webmcp-clear", children: s }) : null
     ] })
   ] });
 }
 function Te({
   apiKey: n,
   model: c,
-  systemPrompt: m,
-  className: w,
+  systemPrompt: d,
+  className: g,
   panelClassName: l,
   chatClassName: s,
-  launcherClassName: u,
+  launcherClassName: m,
   launcherIcon: p,
   launcherLabel: E = "Open assistant",
   closeLauncherLabel: _ = "Close assistant",
-  minimizeLabel: g = "Minimize assistant",
+  minimizeLabel: w = "Minimize assistant",
   showMinimizeButton: b = !0,
   showLauncher: f = !0,
   defaultOpen: h = !1,
@@ -469,15 +469,15 @@ function Te({
   size: x = "md",
   ...v
 }) {
-  const [k, d] = z(h);
+  const [k, u] = P(h);
   le(() => {
-    d(h);
+    u(h);
   }, [h]);
   const j = x === "sm" ? "webmcp-size-sm" : x === "lg" ? "webmcp-size-lg" : "webmcp-size-md", R = [
     "webmcp-widget-shell",
     `webmcp-${y}`,
     j,
-    w || ""
+    g || ""
   ].join(" ").trim(), T = [
     "webmcp-panel",
     k || !f ? "webmcp-panel-open" : "webmcp-panel-closed",
@@ -488,14 +488,14 @@ function Te({
     {
       apiKey: n,
       model: c,
-      systemPrompt: m,
+      systemPrompt: d,
       children: /* @__PURE__ */ r.jsxs("div", { className: R, children: [
         f ? /* @__PURE__ */ r.jsx(
           "button",
           {
             type: "button",
-            onClick: () => d((N) => !N),
-            className: `webmcp-launcher ${u || ""}`.trim(),
+            onClick: () => u((N) => !N),
+            className: `webmcp-launcher ${m || ""}`.trim(),
             "aria-expanded": k,
             "aria-label": k ? _ : E,
             children: p || /* @__PURE__ */ r.jsx(xe, {})
@@ -505,8 +505,8 @@ function Te({
           Ee,
           {
             className: s,
-            onMinimize: f ? () => d(!1) : void 0,
-            minimizeLabel: g,
+            onMinimize: f ? () => u(!1) : void 0,
+            minimizeLabel: w,
             showMinimizeButton: b && f,
             ...v
           }
@@ -516,7 +516,7 @@ function Te({
   );
 }
 export {
-  ge as DEFAULT_SYSTEM_PROMPT,
+  we as DEFAULT_SYSTEM_PROMPT,
   ke as GeminiWebMcpAgentProvider,
   Ee as GeminiWebMcpChat,
   Te as WebMcpChatWidget,
