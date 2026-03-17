@@ -53,7 +53,7 @@ createRoot(document.getElementById('root')).render(
 ```jsx
 import { WebMcpChatWidget } from 'webmcp-chat'
 
-// Optional: import packaged styles manually if your app requires explicit CSS imports.
+// Plain CSS build-safe import (works without Tailwind in your app)
 import 'webmcp-chat/styles.css'
 
 export default function App() {
@@ -90,7 +90,12 @@ By default, `WebMcpChatWidget` provides:
 
 By default, styles are auto-injected by the widget.
 
-You can also import styles explicitly with `import 'webmcp-chat/styles.css'`.
+You can also import styles explicitly:
+
+- Plain CSS (recommended for all apps): `import 'webmcp-chat/styles.css'`
+- Tailwind source CSS (for Tailwind-based override workflows): `import 'webmcp-chat/styles.tailwind.css'`
+
+Use the Tailwind stylesheet only when your app already compiles Tailwind CSS.
 
 ## Props
 

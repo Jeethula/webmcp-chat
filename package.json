@@ -1,6 +1,6 @@
 {
   "name": "webmcp-chat",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "Open-source React chat assistant for WebMCP apps. Drop in a production-ready Gemini-powered widget with built-in UI and fast setup.",
   "type": "module",
   "main": "./dist/index.js",
@@ -17,7 +17,8 @@
       "import": "./dist/index.js",
       "default": "./dist/index.js"
     },
-    "./styles.css": "./dist/styles.css"
+    "./styles.css": "./dist/styles.css",
+    "./styles.tailwind.css": "./dist/styles.tailwind.css"
   },
   "scripts": {
     "build": "vite build && node ./scripts/postbuild.mjs",
